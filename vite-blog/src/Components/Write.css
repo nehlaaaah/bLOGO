@@ -1,0 +1,66 @@
+/* Ensure the html and body elements cover the full viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container for the Write component */
+.write-container {
+  padding: 20px;
+  max-width: 800px; /* Set a fixed maximum width */
+  margin: 0 auto;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); /* Gradient background */
+  background-size: 200% 200%; /* For animation */
+  animation: gradientAnimation 10s ease infinite; /* Animation effect */
+  min-height: 100vh;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align children horizontally */
+  justify-content: center; /* Center align children vertically */
+}
+
+/* Keyframes for the background gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Style for the form */
+form {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for the form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure form takes full width of the container */
+  max-width: 600px; /* Set a fixed maximum width for the form */
+}
+
+/* Style for the form heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style for the submit button */
+.submit-button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: rgba(221, 160, 221, 0.8);
+  color: black;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  margin-top: 10px

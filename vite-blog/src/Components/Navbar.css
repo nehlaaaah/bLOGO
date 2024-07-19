@@ -1,0 +1,10 @@
+/* Navbar.css */
+.logo-icon {
+    width: 50px; /* Adjust the size of the logo */
+    margin-right: 20px; /* Space between logo and title */
+  }
+  
+  .navbar-button {
+    margin: 0 8px; /* Space between buttons */
+  }
+  

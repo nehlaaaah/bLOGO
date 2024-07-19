@@ -1,0 +1,160 @@
+/* Start.css */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes backgroundScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.magazine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  max-width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margin */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative; /* Ensure proper alignment of child elements */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transition for shadow and background color */
+}
+
+.header {
+  background-image: url('https://cdn.pixabay.com/photo/2018/06/17/17/48/pen-3481061_1280.jpg');
+  background-size: cover; /* Ensure the background image covers the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  width: 100%;
+  height: 100%; /* Take the full height of the parent container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: backgroundScroll 30s linear infinite; /* Background scroll animation */
+}
+
+.title {
+  font-size: 5rem; /* Big title size */
+  font-weight: 900;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #000000; /* White text color for the title */
+  text-shadow: 
+    1px 1px 0 #fffefe, /* Black shadow for outlining */
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000; /* 4 sides outline */
+  position: absolute;
+  top: 15%; /* Distance from the top of the header */
+  text-align: center;
+  z-index: 2; /* Ensure it appears above other elements */
+  transition: text-shadow 0.3s ease; /* Transition for text shadow */
+}
+
+.floating-text {
+  color: #e0b0ff; /* Lilac color */
+  font-size: 5rem; /* Adjust the font size */
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: sticky;
+  animation: floating 2s infinite ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 100%;
+  top: 50%; /* Center below the title */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  background: none; /* No background */
+  -webkit-background-clip: text; /* Apply text color */
+  -webkit-text-fill-color: #e0b0ff; /* Lilac color */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition for color and text shadow */
+}
+
+.floating-text div {
+  margin: 0; /* Remove default margin */
+}
+
+.floating-text > div:first-child {
+  margin-bottom: 10px; /* Space between lines */
+}
+
+.start-button {
+  background-color: #ffffff;
+  color: #eeaaf0;
+  border: none;
+  border-radius: 3px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px; /* Distance from the bottom of the page */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for background color and transform */
+}
+
+.start-button:hover {
+  background-color: #000000;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.content {
+  padding: 20px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%); /* Center content vertically */
+  z-index: 1; /* Ensure the content appears above the background */
+  transition: transform 0.3s ease; /* Transition for transform */
+}
+
+.article {
+  margin-bottom: 20px;
+}
+
+.article h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  margin-bottom: 10px;
+  transition: color 0.3s ease; /* Transition for color */
+}
+
+.article p {
+  line-height: 1.6;
+  color: #555;
+  transition: color 0.3s ease; /* Transition for color */
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition for background color and text color */
+}
+
+.footer p {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+}

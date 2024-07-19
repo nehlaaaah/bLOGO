@@ -1,0 +1,83 @@
+/* ViewBlog.css */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes backgroundScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.view-blogs-background {
+  background-image: url('https://cdn.pixabay.com/photo/2018/06/17/17/48/pen-3481061_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: backgroundScroll 30s linear infinite;
+}
+
+.card {
+  animation: fadeIn 1s ease-in-out;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  background: black;
+  color:rgb(0, 0, 0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content, .card-content p {
+  color: rgb(0, 0, 0);
+  font-weight:bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.beautiful-button {
+  background-color: #e0b0ff;
+  color: black;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.beautiful-button:hover {
+  background-color: black;
+  color: #000000;
+}
+
+.posted-blogs-title {
+  color: black;
+  text-shadow: none;
+  font-size: 3rem; /* Larger font size */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Transition for color */
+}

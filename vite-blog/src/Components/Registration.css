@@ -1,0 +1,93 @@
+/* Registration.css */
+
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #E6E6FA, #D8BFD8, #DDA0DD, #DA70D6); /* Lilac gradient */
+  transition: background 0.3s ease;
+}
+
+.registration-card {
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.registration-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.registration-form {
+  display: contents;
+  flex-direction: column;
+}
+
+.registration-form .form-control {
+  margin-bottom: 25px;
+  transition: margin-bottom 0.3s ease;
+}
+
+.registration-form .form-control label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #050404;
+  transition: color 0.3s ease;
+}
+
+.registration-form .form-control input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, padding 0.3s ease;
+}
+
+.registration-form .form-control input:focus {
+  border-color: #000000;
+}
+
+.registration-button {
+  padding: 10px 20px;
+  background-color: #DDA0DD;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.registration-button:hover {
+  background-color: #DA70D6;
+  transform: scale(1.05);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 10px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.login-link a {
+  color: #DDA0DD;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  color: #DA70D6;
+}
